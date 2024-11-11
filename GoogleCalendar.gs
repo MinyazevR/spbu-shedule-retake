@@ -60,7 +60,7 @@ function UpdateCalendar() {
   var calendar = CalendarApp.getCalendarById(calendarIdentificator);
 
   Object.entries(timetableIds).forEach(([timetableId, options]) => {
-    try {// НЕ менять это значение
+    try {
       var res = UrlFetchApp.fetch(`https://timetable.spbu.ru/api/v1/educators/${timetableId}/events/${leftDateStr}/${rightDateStr}`);
       var dct = JSON.parse(res);
     }
